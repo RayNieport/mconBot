@@ -1,0 +1,38 @@
+{
+    "user_commands": {
+        "list":"Lists players on the server",
+        "me":"Displays a message about RCON",
+        "say":"Says something to everyone",
+        "seed":"Displays the server seed",
+        "tell":"Whispers to a player"
+    },
+    
+    "mod_commands": {
+        "clear":"Clears items from player inventory",
+        "difficulty":"Sets the difficulty level", 
+        "gamemode":"Sets a player\"s gamemode",
+        "give":"Gives an item to player(s)",
+        "kill":"Kills an entity",
+        "time":"Sets server time",
+        "tp":"Teleports an entity",
+        "weather":"Sets server weather",
+        "xp":"Adds or removes player XP"
+    },
+
+    "admin_commands": {
+        "ban":"Bans a player",
+        "ban-ip":"Bans a player\"s IP",
+        "banlist":"Shows the server\"s banlist",
+        "defaultgamemode":"Sets the default gamemode",
+        "deop":"Revokes OP status from a player",
+        "gamerule":"Sets or queries a gamerule",
+        "kick":"Kicks a player off the server",
+        "op":"Grants OP status to a player",
+        "pardon":"Pardons a player",
+        "pardon-ip":"Pardons a player\"s IP",
+        "save-all":"Saves the server",
+        "save-off":"Turns autosave off",
+        "save-on":"Turns autosave on",
+        "whitelist":"Modifies the server\"s whitelist"
+    }
+}
