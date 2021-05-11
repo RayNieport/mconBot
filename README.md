@@ -66,7 +66,7 @@ For a list of all supported commands sorted by role, simply send the following:
 
 ## Donate
 
-If you enjoy mconBot, consider [supporting my work](paypal.me/RayNieport) on this project and others! 
+If you enjoy mconBot, consider [supporting my work](https://paypal.me/RayNieport) on this project and others! 
 
 ## License and Copyright
 
