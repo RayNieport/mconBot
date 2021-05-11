@@ -2,6 +2,7 @@
 
 > A bot to interact with your Minecraft server - from Discord! 
 
+![RepoSize](https://img.shields.io/github/repo-size/RayNieport/mconBot?style=flat-square)
 [![LastCommit](https://img.shields.io/github/last-commit/RayNieport/mconBot?style=flat-square)](https://github.com/RayNieport/mconBot/commits/main)
 [![License](https://img.shields.io/github/license/RayNieport/mconBot?style=flat-square)](https://github.com/RayNieport/mconBot/blob/main/LICENSE)
 
