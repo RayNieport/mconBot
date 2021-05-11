@@ -1,4 +1,4 @@
-# <img src="mcon.png" align="center" width="80"> mconBot
+# <img src="images/mcon.png" align="center" width="80"> mconBot
 
 > A bot to interact with your Minecraft server - from Discord! 
 
@@ -36,7 +36,7 @@ git clone https://github.com/RayNieport/mconBot.git
 
 __Third__, create your instance of the bot at the [Discord Developer Portal](https://discord.com/developers/applications):
 1. Click on the "New Application" button, and give your bot a name.
-2. Give your bot a nice icon: the included icon is located at mconBot/mcon.png in the cloned repository.
+2. Give your bot a nice icon: the included icon is located at mconBot/images/mcon.png in the cloned repository.
 3. Go to the OAuth2 page, scroll down to "Scopes", and select "bot". Under "Bot Permissions", select "View Channels" and "Send Messages".
 4. Copy the link that was generated under "Scopes" and paste it into a new browser tab. Follow the instructions to add the bot to your Discord guild.
 5. Head back to the Developer Portal and go to the Bot page. Uncheck "Public Bot", then copy the Token.
@@ -54,6 +54,10 @@ __Finally__, test out your bot by sending the following into a text channel in y
 ```
 >hi
 ```
+You should get the following response:
+
+<img src="images/hello.png">
+
 For a list of all supported commands sorted by role, simply send the following:
 ```
 >help
