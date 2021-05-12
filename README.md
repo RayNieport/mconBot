@@ -23,31 +23,36 @@ To solve these problems, mconBot does the following:
 
 ## Nice! How do I get started?
 
-__First__, enable RCON in the [server.properties](https://minecraft.fandom.com/wiki/Server.properties) file:
+__First__, enable RCON in the [server.properties](https://minecraft.fandom.com/wiki/Server.properties) file of your Minecraft server:
 ```
 enable-rcon=true
 rcon.password=<your passord>
 rcon.port=25575
 broadcast-rcon-to-ops=<optional, true|false>
 ```
-__Second__, clone the git respository:
+__Second__, clone the git respository to the machine you want to run the bot on:
 ```
 git clone https://github.com/RayNieport/mconBot.git
 ```
 
-__Third__, create your instance of the bot at the [Discord Developer Portal](https://discord.com/developers/applications):
+__Third__, install [python 3](https://www.python.org/downloads/) , then change directory into the cloned repository and install the necessary dependencies:
+```
+pip3 install -r requirements.txt
+```
+
+__Fourth__, create your instance of the bot at the [Discord Developer Portal](https://discord.com/developers/applications):
 1. Click on the "New Application" button, and give your bot a name.
 2. Give your bot a nice icon: the included icon is located at mconBot/images/mcon.png in the cloned repository.
 3. Go to the OAuth2 page, scroll down to "Scopes", and select "bot". Under "Bot Permissions", select "View Channels" and "Send Messages".
 4. Copy the link that was generated under "Scopes" and paste it into a new browser tab. Follow the instructions to add the bot to your Discord guild.
 5. Head back to the Developer Portal and go to the Bot page. Uncheck "Public Bot", then copy the Token.
 
-__Fourth__, modify __mconBot/src/.env__ in the cloned repository:
+__Fifth__, modify __mconBot/src/.env__ in the cloned repository:
 1. Paste the Discord Token aquired above into the appropriate field.
 2. Fill in your Minecraft server's IP and RCON password.
 3. Change the User, Mod, and Admin roles to the preffered roles in your Discord guild, or create the provided roles.
 
-__Fifth__, head into __/mconBot/src/__ in the cloned repository and start up the bot:
+__Sixth__, head into __/mconBot/src/__ in the cloned repository and start up the bot:
 ```
 python3 mconBot.py
 ```
