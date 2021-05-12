@@ -35,7 +35,7 @@ __Second__, clone the git respository to the machine you want to run the bot on:
 git clone https://github.com/RayNieport/mconBot.git
 ```
 
-__Third__, install [python 3](https://www.python.org/downloads/) , then change directory into the cloned repository and install the necessary dependencies:
+__Third__, install [python 3](https://www.python.org/downloads/) , then navigate to the cloned repository and install the necessary dependencies:
 ```
 pip3 install -r requirements.txt
 ```
