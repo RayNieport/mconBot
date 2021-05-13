@@ -76,7 +76,7 @@ For a list of all supported commands sorted by role, simply send the following:
 ## What else is included in this repository?
 1. If you're interested in running mconBot as a Docker container, the included __Dockerfile__ and __requirements.txt__ will allow you to build the image. I recommend running through all the steps above to test your bot before building the image.
 2. If you want to modify which roles have access to certain commands, you can modify __mconBot/src/commands.json__. You should be able to add extra commands here as well, although this is not officially supported.
-3. The __mconBot/mcon_pack/__ directory is a miecraft texture pack with modified furnace texture. This was used to generate the logo for the project. You can use this texture pack as an example if you want to create a custom minecraft-themed logo. For more info on creating your own logo, see the Licencse and Copyright section below.
+3. The __mconBot/mcon_pack/__ directory is a minecraft texture pack with modified furnace texture. This was used to generate the logo for the project. You can use this texture pack as an example if you want to create a custom minecraft-themed logo. For more info on creating your own logo, see the Licencse and Copyright section below.
 
 ## Donate
 
