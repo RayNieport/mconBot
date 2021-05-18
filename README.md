@@ -3,7 +3,6 @@
 > A bot to interact with your Minecraft server - from Discord! 
 
 [![DockerPulls](https://img.shields.io/docker/pulls/raynieport/mconbot?style=flat-square)](https://hub.docker.com/r/raynieport/mconbot)
-[![RepoSize](https://img.shields.io/github/repo-size/RayNieport/mconBot?style=flat-square)](https://github.com/RayNieport/mconBot)
 [![LastCommit](https://img.shields.io/github/last-commit/RayNieport/mconBot?style=flat-square)](https://github.com/RayNieport/mconBot/commits/main)
 [![License](https://img.shields.io/github/license/RayNieport/mconBot?style=flat-square)](https://github.com/RayNieport/mconBot/blob/main/LICENSE)
 
@@ -22,6 +21,7 @@ To solve these problems, mconBot does the following:
 1. Uses Discord as an interface to eliminate the need for port forwarding or a VPN (mconBot is intended to be hosted on the same LAN as your Minecraft server). 
 2. Solves permission issues using a three-tiered system of Users, Moderators, and Administrators. Higher tiers allow more sensitive commands to be executed.
 
+><img src="images/mconBotDemo.png" width="1000">
 
 ## Nice! How do I get started?
 
