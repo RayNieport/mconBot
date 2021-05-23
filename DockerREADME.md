@@ -4,7 +4,7 @@
 A bot to interact with your Minecraft server - from Discord! 
 
 ![DockerPulls](https://img.shields.io/docker/pulls/raynieport/mconbot?style=flat-square)
-![DockerStars](https://img.shields.io/docker/stars/raynieport/mconbot?style=flat-square)
+![DockerSize](https://img.shields.io/docker/image-size/raynieport/mconbot/arm64?style=flat-square)
 [![License](https://img.shields.io/github/license/RayNieport/mconBot?style=flat-square)](https://github.com/RayNieport/mconBot/blob/main/LICENSE)
 
 __If you would like more customization, please see [the full docs](https://github.com/RayNieport/mconBot) on Github!__
