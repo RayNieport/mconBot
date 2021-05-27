@@ -36,7 +36,10 @@ for com in cmds['admin_commands']:
 async def send_rcon(cmd, args, message):
     try:
         with MCRcon(IP, PASS) as mcr:
-            resp = mcr.command(cmd + ' ' + args)
+            if args:
+                resp = mcr.command(cmd + ' ' + args)
+            else:
+                resp = mcr.command(cmd)
     except:
         resp = 'Connection from the bot to the server failed.'
 
