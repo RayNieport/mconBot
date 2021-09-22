@@ -3,7 +3,6 @@
 > A bot to interact with your Minecraft server - from Discord! 
 
 [![DockerPulls](https://img.shields.io/docker/pulls/raynieport/mconbot?style=flat-square)](https://hub.docker.com/r/raynieport/mconbot)
-[![LastCommit](https://img.shields.io/github/last-commit/RayNieport/mconBot?style=flat-square)](https://github.com/RayNieport/mconBot/commits/main)
 [![License](https://img.shields.io/github/license/RayNieport/mconBot?style=flat-square)](https://github.com/RayNieport/mconBot/blob/main/LICENSE)
 
 
@@ -85,4 +84,4 @@ If you enjoy mconBot, consider __[supporting my work](https://paypal.me/RayNiepo
 
 ## License and Copyright
 
-If you're interested in modifying or using my work for your own project, please see the LICENSE for up to date copyright and license information regarding mconBot. Please don't use my logo without asking first - you can make your own Minecraft themed logo by creating a __[texture pack](https://minecraft.fandom.com/wiki/Tutorials/Creating_a_resource_pack)__ and rendering your modified asset using __[Block Renderer](https://www.curseforge.com/minecraft/mc-mods/block-renderer)__. If you have suggestions for my project or make your own derivative, I'd love to hear about it!
+If you're interested in modifying or using my work for your own project, please see the LICENSE for up to date copyright and license information regarding mconBot. Feel free to use my logo when hosting your own instance of mconBot. However, please don't use my logo for your own project without asking first - you can make your own Minecraft themed logo by creating a __[texture pack](https://minecraft.fandom.com/wiki/Tutorials/Creating_a_resource_pack)__ and rendering your modified asset using __[Block Renderer](https://www.curseforge.com/minecraft/mc-mods/block-renderer)__. If you have suggestions for my project or make your own derivative, I'd love to hear about it!
