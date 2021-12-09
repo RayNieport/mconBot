@@ -15,7 +15,9 @@ MOD_ROLE = getenv('DISCORD_MOD_ROLE')
 ADMIN_ROLE = getenv('DISCORD_ADMIN_ROLE')
 IP = getenv('MINECRAFT_IP')
 PASS = getenv('MINECRAFT_PASS')
-PORT = int(getenv('RCON_PORT'))
+PORT = getenv('RCON_PORT')
+if PORT == None: PORT = 25575
+else : PORT = int(PORT)
 
 # Get dictionary of commands
 with open('commands.json') as cmd_file:
