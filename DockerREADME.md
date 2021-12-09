@@ -43,7 +43,7 @@ __Second__, create your instance of the bot at the __[Discord Developer Portal](
 
 __Third__, modify __[this .env file](https://github.com/RayNieport/mconBot/blob/main/src/.env)__ and save it in a convenient directory on the computer running Docker:
 1. Paste the Discord Token aquired above into the appropriate field.
-2. Fill in your Minecraft server's IP and RCON password.
+2. Fill in your Minecraft server's IP and RCON password. If you're not using the default RCON port (25575), you can also change that.
 3. Change the User, Mod, and Admin roles to the preffered roles in your Discord guild, or create the provided roles.
 
 __Fourth__, head into the convenient directory you used above and run the docker image:

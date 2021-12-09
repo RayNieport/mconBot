@@ -32,6 +32,7 @@ for com in cmds['mod_commands']:
 Help.add_field(name='\u200b', value='-------------------------' + ADMIN_ROLE + '-------------------------')
 for com in cmds['admin_commands']:
     Help.add_field(name=com, value=cmds['admin_commands'][com], inline=False)
+    Help.add_field(name='admin', value='Runs a custom command', inline=False)
 
 # Send command via rcon and print response
 async def send_rcon(cmd, args, message):
