@@ -7,34 +7,44 @@ from dotenv import load_dotenv
 from json import load
 from mcrcon import MCRcon
 
-# Get environment variables
-load_dotenv()
-TOKEN = getenv('DISCORD_TOKEN')
-USER_ROLE = getenv('DISCORD_USER_ROLE')
-MOD_ROLE = getenv('DISCORD_MOD_ROLE')
-ADMIN_ROLE = getenv('DISCORD_ADMIN_ROLE')
-IP = getenv('MINECRAFT_IP')
-PASS = getenv('MINECRAFT_PASS')
-PORT = getenv('RCON_PORT')
-if PORT == None: PORT = 25575
-else : PORT = int(PORT)
+# Override default Client class to allow messages from other bots
+class UnfilteredClient(discord.Client):
+    async def process_commands(self, message):
+        ctx = await self.get_context(message)
+        await self.invoke(ctx)
 
-# Get dictionary of commands
-with open('commands.json') as cmd_file:
-    cmds = load(cmd_file)
+client = UnfilteredClient()
 
-# Create help message
-Help = discord.Embed(description="A bot to interact with your Minecraft server - from Discord!")
-Help.add_field(name='\u200b', value='-------------------------' + USER_ROLE + '-------------------------')
-for com in cmds['user_commands']:
-    Help.add_field(name=com, value=cmds['user_commands'][com], inline=False)
-Help.add_field(name='\u200b', value='-------------------------' + MOD_ROLE + '-------------------------')
-for com in cmds['mod_commands']:
-    Help.add_field(name=com, value=cmds['mod_commands'][com], inline=False)
-Help.add_field(name='\u200b', value='-------------------------' + ADMIN_ROLE + '-------------------------')
-for com in cmds['admin_commands']:
-    Help.add_field(name=com, value=cmds['admin_commands'][com], inline=False)
-    Help.add_field(name='admin', value='Runs a custom command', inline=False)
+if __name__ == "__main__":
+    # Get environment variables
+    load_dotenv()
+    TOKEN = getenv('DISCORD_TOKEN')
+    USER_ROLE = getenv('DISCORD_USER_ROLE')
+    MOD_ROLE = getenv('DISCORD_MOD_ROLE')
+    ADMIN_ROLE = getenv('DISCORD_ADMIN_ROLE')
+    IP = getenv('MINECRAFT_IP')
+    PASS = getenv('MINECRAFT_PASS')
+    PORT = getenv('RCON_PORT')
+    if PORT == None: PORT = 25575
+    else : PORT = int(PORT)
+
+    # Get dictionary of commands
+    with open('commands.json') as cmd_file:
+        cmds = load(cmd_file)
+
+    # Create help message
+    Help = discord.Embed(description="A bot to interact with your Minecraft server - from Discord!")
+    Help.add_field(name='\u200b', value='-------------------------' + USER_ROLE + '-------------------------')
+    for com in cmds['user_commands']:
+        Help.add_field(name=com, value=cmds['user_commands'][com], inline=False)
+    Help.add_field(name='\u200b', value='-------------------------' + MOD_ROLE + '-------------------------')
+    for com in cmds['mod_commands']:
+        Help.add_field(name=com, value=cmds['mod_commands'][com], inline=False)
+    Help.add_field(name='\u200b', value='-------------------------' + ADMIN_ROLE + '-------------------------')
+    for com in cmds['admin_commands']:
+        Help.add_field(name=com, value=cmds['admin_commands'][com], inline=False)
+        Help.add_field(name='admin', value='Runs a custom command', inline=False)
+
 
 # Send command via rcon and print response
 async def send_rcon(cmd, args, message):
@@ -52,11 +62,11 @@ async def send_rcon(cmd, args, message):
         await message.channel.send(resp)
         print (f'{resp}')
 
-# When message received
-bot = discord.Client()
-@bot.event
+
+# Process message when received
+@client.event
 async def on_message(message):
-    if not message.content.startswith('>') or message.author == bot.user:
+    if not message.content.startswith('>') or message.author == client.user:
         return
 
     # get command and arguments
@@ -105,4 +115,4 @@ async def on_message(message):
     else:
         await message.channel.send('Invalid command.')
 
-bot.run(TOKEN)
+client.run(TOKEN)
