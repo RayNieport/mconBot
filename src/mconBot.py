@@ -25,8 +25,11 @@ if __name__ == "__main__":
     IP = getenv('MINECRAFT_IP')
     PASS = getenv('MINECRAFT_PASS')
     PORT = getenv('RCON_PORT')
+    BOT_LEVEL = getenv('BOT_LEVEL')
     if PORT == None: PORT = 25575
-    else : PORT = int(PORT)
+    else: PORT = int(PORT)
+    if BOT_LEVEL == None: BOT_LEVEL = 1
+    else: BOT_LEVEL = int(BOT_LEVEL) 
 
     # Get dictionary of commands
     with open('commands.json') as cmd_file:
@@ -43,7 +46,7 @@ if __name__ == "__main__":
     Help.add_field(name='\u200b', value='-------------------------' + ADMIN_ROLE + '-------------------------')
     for com in cmds['admin_commands']:
         Help.add_field(name=com, value=cmds['admin_commands'][com], inline=False)
-        Help.add_field(name='admin', value='Runs a custom command', inline=False)
+    Help.add_field(name='admin', value='Runs a custom command', inline=False)
 
 
 # Send command via rcon and print response
@@ -78,10 +81,13 @@ async def on_message(message):
 
     # get author's clearance level
     authLevel = 0
-    for role in message.author.roles:
-        if role.name == USER_ROLE: authLevel+=1
-        elif role.name == MOD_ROLE: authLevel+=2
-        elif role.name == ADMIN_ROLE: authLevel+=4
+    if message.author.bot == 1:
+        authLevel = BOT_LEVEL
+    else:
+        for role in message.author.roles:
+            if role.name == USER_ROLE: authLevel+=1
+            elif role.name == MOD_ROLE: authLevel+=2
+            elif role.name == ADMIN_ROLE: authLevel+=4
 
     # handle command
     if cmd == 'help':
