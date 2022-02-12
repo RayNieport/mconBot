@@ -2,10 +2,10 @@
 # Ray Nieport 2021
 
 import discord
+from rcon import rcon
 from os import getenv
 from dotenv import load_dotenv
 from json import load
-from mcrcon import MCRcon
 
 # Override default Client class to allow messages from other bots
 class UnfilteredClient(discord.Client):
@@ -52,7 +52,7 @@ if __name__ == "__main__":
 # Send command via rcon and print response
 async def send_rcon(cmd, args, message):
     try:
-        with MCRcon(IP, PASS, PORT) as mcr:
+        with rcon(IP, PASS, PORT) as mcr:
             if args:
                 resp = mcr.command(cmd + ' ' + args)
             else:
