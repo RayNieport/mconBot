@@ -1,5 +1,4 @@
-# mconBot.py
-# Ray Nieport 2021
+# Original work Copyright (c) 2022 Ray Nieport
 
 import discord
 from rcon import rcon
