@@ -1,7 +1,3 @@
-# Original MCRcon Copyright (c) 2015 Barnaby Gale
-# Modified work Copyright (c) 2018 Adrian Turjak
-# Modified work Copyright (c) 2022 Ray Nieport
-
 import socket
 import select
 import struct
