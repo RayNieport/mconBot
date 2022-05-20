@@ -1,11 +1,10 @@
 MIT License
 
-mconBot: Copyright (c) 2022 Ray Nieport
+mconBot Copyright (c) 2022 Ray Nieport
 
-rcon.py:
 Original MCRcon Copyright (c) 2015 Barnaby Gale
 Modified work Copyright (c) 2018 Adrian Turjak
-Modified work Copyright (c) 2022 Ray Nieport
+rcon.py Modified work Copyright (c) 2022 Ray Nieport
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
