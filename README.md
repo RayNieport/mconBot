@@ -13,7 +13,7 @@ Minecraft servers use a protocol called __[RCON](https://wiki.vg/RCON)__ to acce
 
 However, using RCON has some issues:
 1. Port forwarding RCON to control your server over the internet is not very secure.
-2. The RCON "user" has permission to run the full suite of Minecraft __[commands](https://minecraft.fandom.com/wiki/Commands)__, without any restrictions.
+2. The RCON "user" has permission to run the full suite of Minecraft __[commands](https://minecraft.wiki/w/Commands)__, without any restrictions.
 3. There is only one RCON "user", so your friends can't log in to moderate the server unless you give them the credentials for unrestricted RCON access.
 
 To solve these problems, mconBot does the following:
@@ -26,7 +26,7 @@ To solve these problems, mconBot does the following:
 
 __For a simple pre-built docker image, follow the guide on [Docker Hub](https://hub.docker.com/r/raynieport/mconbot). Otherwise, proceed with manual installation:__
 
-__First__, enable RCON by editing the __[server.properties](https://minecraft.fandom.com/wiki/Server.properties)__ file of your Minecraft server:
+__First__, enable RCON by editing the __[server.properties](https://minecraft.wiki/w/Server.properties)__ file of your Minecraft server:
 ```
 enable-rcon=true
 rcon.password=<your passord>
@@ -84,4 +84,4 @@ If you enjoy mconBot, consider __[supporting my work](https://paypal.me/RayNiepo
 
 ## License and Copyright
 
-If you're interested in modifying or using my work for your own project, please see the __[LICENSE](https://github.com/RayNieport/mconBot/blob/main/LICENSE)__ for up to date copyright and license information regarding mconBot. Feel free to use my logo when hosting your own instance of mconBot. However, please don't use my logo for your own project without asking first - you can make your own Minecraft themed logo by creating a __[texture pack](https://minecraft.fandom.com/wiki/Tutorials/Creating_a_resource_pack)__ and rendering your modified asset using __[Block Renderer](https://www.curseforge.com/minecraft/mc-mods/block-renderer)__. If you have suggestions for my project or make your own derivative, I'd love to hear about it!
+If you're interested in modifying or using my work for your own project, please see the __[LICENSE](https://github.com/RayNieport/mconBot/blob/main/LICENSE)__ for up to date copyright and license information regarding mconBot. Feel free to use my logo when hosting your own instance of mconBot. However, please don't use my logo for your own project without asking first - you can make your own Minecraft themed logo by creating a __[texture pack](https://minecraft.wiki/w/Tutorials/Creating_a_resource_pack)__ and rendering your modified asset using __[Block Renderer](https://www.curseforge.com/minecraft/mc-mods/block-renderer)__. If you have suggestions for my project or make your own derivative, I'd love to hear about it!
